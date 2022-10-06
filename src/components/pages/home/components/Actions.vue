@@ -15,25 +15,25 @@
       <div class="row mx-auto py-lg-5 cards-container">
         <div class="col-6 py-1 py-lg-1 col-lg-3">
           <section class="action-card mx-auto my-auto d-flex row">
-            <img class="card-icon mx-auto mt-3 my-lg-1" src="src/assets/images/action-icon-1.png" alt="Eventos">
+            <img class="card-icon mx-auto mt-3 my-lg-1" src="/src/assets/images/action-icon-1.png" alt="Eventos">
             <span class="description-text">Eventos</span>
           </section>
         </div>
         <div class="col-6 py-1 py-lg-1 col-lg-3">
           <section class="action-card mx-auto my-auto d-flex row">
-            <img class="card-icon mx-auto mt-3 my-lg-1" height="190px" src="src/assets/images/action-icon-2.png" alt="Eventos">
+            <img class="card-icon mx-auto mt-3 my-lg-1" height="190px" src="/src/assets/images/action-icon-2.png" alt="Eventos">
             <span class="description-text mb-3">Maratón</span>
           </section>
         </div>
         <div class="col-6 py-1 py-lg-1 col-lg-3">
           <section class="action-card mx-auto my-auto d-flex row">
-            <img class="card-icon mx-auto mt-3 my-lg-1"  height="auto" src="src/assets/images/action-icon-3.png" alt="Eventos">
+            <img class="card-icon mx-auto mt-3 my-lg-1"  height="auto" src="/src/assets/images/action-icon-3.png" alt="Eventos">
             <span class="description-text">Bono Contribución</span>
           </section>
         </div>
         <div class="col-6 py-1 py-lg-1 col-lg-3">
           <section class="action-card mx-auto my-auto d-flex row">
-            <img class="card-icon mx-auto mt-3 my-lg-1" src="src/assets/images/action-icon-4.png" alt="Eventos">
+            <img class="card-icon mx-auto mt-3 my-lg-1" src="/src/assets/images/action-icon-4.png" alt="Eventos">
             <span class="description-text">Campañas</span>
           </section>
         </div>

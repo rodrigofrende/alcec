@@ -28,11 +28,11 @@ export default {
   data () {
     return {
       images: [
-        { src: 'images/home-slider-1.png', alt: 'Alcec' },
-        { src: 'images/home-slider-2.png', alt: 'Alcec' },
-        { src: 'images/home-slider-3.png', alt: 'Alcec' },
-        { src: 'images/services-slider-1.png', alt: 'Alcec', innerText: 'Turnos', href: 'http://centrooncologico.alcec.org/turnos/' },
-        { src: 'images/home-slider-4.png', alt: 'Alcec', href: 'http://hogardetransito.alcec.org/', innerText: 'Reservar' },
+        { src: '/images/home-slider-1.png', alt: 'Alcec' },
+        { src: '/images/home-slider-2.png', alt: 'Alcec' },
+        { src: '/images/home-slider-3.png', alt: 'Alcec' },
+        { src: '/images/services-slider-1.png', alt: 'Alcec', innerText: 'Turnos', href: 'http://centrooncologico.alcec.org/turnos/' },
+        { src: '/images/home-slider-4.png', alt: 'Alcec', href: 'http://hogardetransito.alcec.org/', innerText: 'Reservar' },
       ]
     }
   }

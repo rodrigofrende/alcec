@@ -43,9 +43,9 @@ export default {
   data () {
     return {
       images: [
-        { src: '/images/home-slider-2.png', alt: 'Alcec' },
-        { src: '/images/home-slider-3.png', alt: 'Alcec' },
-        { src: '/images/home-slider-4.png', alt: 'Alcec', href: 'http://hogardetransito.alcec.org/', innerText: 'Reservar' },
+        { src: 'images/home-slider-2.png', alt: 'Alcec' },
+        { src: 'images/home-slider-3.png', alt: 'Alcec' },
+        { src: 'images/home-slider-4.png', alt: 'Alcec', href: 'http://hogardetransito.alcec.org/', innerText: 'Reservar' },
       ]
     }
   }

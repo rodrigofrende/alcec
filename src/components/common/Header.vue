@@ -1,11 +1,5 @@
 <script>
-import logo from "/images/iso-logo.png"
 export default {
-  data () {
-    return {
-      logo: logo
-    }
-  },
   methods: {
     openLink (href) {
       if (!href) return
@@ -24,7 +18,7 @@ export default {
       <button class="btn btn-secondary login-btn" @click="openLink('http://45.179.72.126/login_web/')">
         <b>Login</b> <span>|</span> <span>Mi Portal</span>
       </button>
-      <img :src="logo" class="mx-auto d-block logo pt-5 pt-md-0" alt="..." />
+      <img src="images/iso-logo.png" class="mx-auto d-block logo pt-5 pt-md-0" alt="..." />
     </div>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">

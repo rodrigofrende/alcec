@@ -17,7 +17,7 @@
           </section>
         </div>
         <div class="col-12 pt-4">
-          <img class="img-fluid" src="/src/assets/images/home-quienes-somos.png" alt="Quienes somos">
+          <img class="img-fluid" src="/images/home-quienes-somos.png" alt="Quienes somos">
         </div>
         <!-- insert mobile image, display-md-none ? -->
       </div>

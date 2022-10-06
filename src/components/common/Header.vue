@@ -1,5 +1,5 @@
 <script>
-import logo from "/src/assets/images/iso-logo.png"
+import logo from "/images/iso-logo.png"
 export default {
   data () {
     return {

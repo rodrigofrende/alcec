@@ -37,7 +37,7 @@
         </div>
       </div>
       <div class="d-flex align-items-center">
-        <img class="mt-2" src="/src/assets/images/footer-logo.png" alt="ALCEC" height="160">
+        <img class="mt-2" src="/images/footer-logo.png" alt="ALCEC" height="160">
       </div>
     </section>
   </div>

@@ -1,9 +1,9 @@
 <template lang="">
   <div class="actions-container">
-    <div class="row mb-5">
+    <div class="row mb-5" id="evento">
       <div class="col-12 col-lg-5 mb-5 mb-lg-0">
         <section class="action-card my-auto d-flex row">
-          <img class="card-icon mx-auto mt-1 my-lg-1" src="/images/action-icon-1.png" alt="Eventos">
+          <img class="card-icon mx-auto mt-1 my-lg-1" src="/src/assets/images/action-icon-1.png" alt="Eventos">
           <span class="description-text">Eventos</span>
         </section>
       </div>
@@ -14,10 +14,10 @@
       </div>
     </div>
 
-    <div class="row py-5">
+    <div class="row py-5" id="maraton">
       <div class="col-12 col-lg-5 mb-5 mb-lg-0">
         <section class="action-card my-auto d-flex row">
-          <img class="card-icon mx-auto mt-1 my-lg-1" src="/images/action-icon-2.png" alt="Eventos">
+          <img class="card-icon mx-auto mt-1 my-lg-1" src="/src/assets/images/action-icon-2.png" alt="Eventos">
           <span class="description-text">Maratón</span>
         </section>
       </div>
@@ -30,10 +30,10 @@
       </div>
     </div>
 
-    <div class="row py-5">
+    <div class="row py-5" id="bono">
       <div class="col-12 col-lg-5 mb-5 mb-lg-0">
         <section class="action-card my-auto d-flex row">
-          <img class="card-icon mx-auto mt-1 my-lg-1" src="/images/action-icon-3.png" alt="Eventos">
+          <img class="card-icon mx-auto mt-1 my-lg-1" src="/src/assets/images/action-icon-3.png" alt="Eventos">
           <span class="description-text">Bono Contribución</span>
         </section>
       </div>
@@ -46,10 +46,10 @@
       </div>
     </div>
 
-    <div class="row py-5">
+    <div class="row py-5" id="campaña">
       <div class="col-12 col-lg-5 mb-5 mb-lg-0">
         <section class="action-card my-auto d-flex row">
-          <img class="card-icon mx-auto mt-1 my-lg-1" src="/images/action-icon-4.png" alt="Eventos">
+          <img class="card-icon mx-auto mt-1 my-lg-1" src="/src/assets/images/action-icon-4.png" alt="Eventos">
           <span class="description-text">Campañas</span>
         </section>
       </div>
@@ -70,9 +70,18 @@
 </template>
 <script>
 import Footer from '/src/components/common/Footer.vue'
+
 export default {
   components: {
     Footer
+  },
+  mounted () {
+    console.log(this.$route.hash)
+    
+    const el = document.querySelector(`${this.$route.hash}`)
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
   }
 }
 </script>

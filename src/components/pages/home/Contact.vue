@@ -4,8 +4,8 @@
     <AboutUs />
     <Actions />
     <Donate />
-    <ContactForm />
-    <Footer id="target"/>
+    <ContactForm id="target"/>
+    <Footer />
   </div>
   </template>
   <script>
@@ -34,11 +34,11 @@
     data () {
       return {
         images: [
-          { src: '/images/home-slider-1.png', alt: 'Alcec' },
-          { src: '/images/home-slider-2.png', alt: 'Alcec' },
-          { src: '/images/home-slider-3.png', alt: 'Alcec' },
-          { src: '/images/services-slider-1.png', alt: 'Alcec', innerText: 'Turnos', href: 'http://centrooncologico.alcec.org/turnos/' },
-          { src: '/images/home-slider-4.png', alt: 'Alcec', href: 'http://hogardetransito.alcec.org/', innerText: 'Reservar' },
+          { src: '/src/assets/images/home-slider-1.png', alt: 'Alcec' },
+          { src: '/src/assets/images/home-slider-2.png', alt: 'Alcec' },
+          { src: '/src/assets/images/home-slider-3.png', alt: 'Alcec' },
+          { src: '/src/assets/images/services-slider-1.png', alt: 'Alcec', innerText: 'Turnos', href: 'http://centrooncologico.alcec.org/turnos/' },
+          { src: '/src/assets/images/home-slider-4.png', alt: 'Alcec', href: 'http://hogardetransito.alcec.org/', innerText: 'Reservar', isRouterRedirect: true },
         ]
       }
     }

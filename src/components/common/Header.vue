@@ -12,13 +12,13 @@ export default {
 <template>
   <div>
     <div class="d-flex pb-4">
-      <button class="btn btn-secondary turno-btn" @click="openLink('http://centrooncologico.alcec.org/turnos/')">
+      <button class="btn btn-secondary turno-btn" @click="openLink('https://api.whatsapp.com/send?phone=+543442666225&text=%20')">
         <span>Pedí tu</span> <b>Turno</b>
       </button>
       <button class="btn btn-secondary login-btn" @click="openLink('http://45.179.72.126/login_web/')">
         <b>Login</b> <span>|</span> <span>Mi Portal</span>
       </button>
-      <img src="/images/iso-logo.png" class="mx-auto d-block logo pt-5 pt-md-0" alt="..." />
+      <img src="/src/assets/images/iso-logo.png" class="mx-auto d-block logo pt-5 pt-md-0" alt="..." />
     </div>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
@@ -35,7 +35,7 @@ export default {
               <router-link class="nav-link" aria-current="page" to="/nosotros" :class="[{'active': $route.path === '/nosotros'}]">NOSOTROS</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" aria-current="page" to="/accion"  :class="[{'active': $route.path === '/accion'}]">ACCIONES</router-link>
+              <router-link class="nav-link" aria-current="page" to="/acciones"  :class="[{'active': $route.path === '/acciones'}]">ACCIONES</router-link>
             </li>
             <li class="nav-item" :class="true ? 'active' : ''">
               <router-link class="nav-link" aria-current="page" to="/colaborar"  :class="[{'active': $route.path === '/colaborar'}]">COLABORAR</router-link>

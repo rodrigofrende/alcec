@@ -89,7 +89,7 @@
               <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
             </section>
             <section class="ms-auto d-flex mt-auto">
-              <button @click="sendForm" class="btn btn-primary w-100 align-content-bottom d-flex">
+              <button type="submit" class="btn btn-primary w-100 align-content-bottom d-flex">
                 <span class="msg">Enviar</span>
               </button>
             </section>

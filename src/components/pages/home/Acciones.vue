@@ -1,10 +1,10 @@
 <template lang="">
   <div class="mt-4">
     <Carrousel :images="images" />
-    <AboutUs id="target"/>
-    <Actions />
+    <AboutUs />
+    <Actions id="target"/>
     <Donate />
-    <ContactForm />
+    <ContactForm/>
     <Footer />
   </div>
   </template>

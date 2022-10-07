@@ -28,33 +28,50 @@
   </div>
 </template>
 <script>
-import Carrousel from '../home/components/Carrousel.vue';
-import Footer from '/src/components/common/Footer.vue'
-import Diagnostic from './components/Diagnostic.vue'
+import Carrousel from "../home/components/Carrousel.vue";
+import Footer from "/src/components/common/Footer.vue";
+import Diagnostic from "./components/Diagnostic.vue";
 
 export default {
- components: {
-  Carrousel,
-  Footer,
-  Diagnostic
- },
- data () {
+  components: {
+    Carrousel,
+    Footer,
+    Diagnostic,
+  },
+  data() {
     return {
       images: [
-        { src: '/images/services-slider-1.png', alt: 'Alcec', innerText: 'Turnos', href: 'http://centrooncologico.alcec.org/turnos/' },
-        { src: '/images/home-slider-4.png', alt: 'Alcec', href: 'http://hogardetransito.alcec.org/', innerText: 'Reservar' },
+        {
+          src: "/src/assets/images/services-slider-1.png",
+          alt: "Alcec",
+          innerText: "Turnos",
+          href: "http://centrooncologico.alcec.org/turnos/",
+        },
+        {
+          src: "/src/assets/images/home-slider-4.png",
+          alt: "Alcec",
+          href: "http://hogardetransito.alcec.org/",
+          innerText: "Reservar",
+          isRouterRedirect: true
+        },
       ],
       images2: [
-        { src: '/images/home-slider-4.png', alt: 'Alcec', href: 'http://hogardetransito.alcec.org/', innerText: 'Reservar' },
-      ]
-    }
-  }
-}
+        {
+          src: "/src/assets/images/home-slider-4.png",
+          alt: "Alcec",
+          href: "http://hogardetransito.alcec.org/",
+          innerText: "Reservar",
+          isRouterRedirect: true
+        },
+      ],
+    };
+  },
+};
 </script>
 <style lang="scss" scoped>
-  .grey-container {
-    padding: 10vh 7vw;
-    background-color: rgba(231, 231, 231, .2);
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-  }
+.grey-container {
+  padding: 10vh 7vw;
+  background-color: rgba(231, 231, 231, 0.2);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
 </style>

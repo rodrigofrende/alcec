@@ -13,27 +13,27 @@
         </section>
       </div>
       <div class="row mx-auto py-lg-5 cards-container">
-        <div class="col-6 py-1 py-lg-1 col-lg-3">
-          <section class="action-card mx-auto my-auto d-flex row">
-            <img class="card-icon mx-auto mt-3 my-lg-1" src="/images/action-icon-1.png" alt="Eventos">
+        <div class="col-6 py-5 py-lg-1 col-lg-3">
+          <section class="action-card mx-auto my-auto d-flex row" @click="routerPush('evento')">
+            <img class="card-icon mx-auto mt-3 my-lg-1" src="/src/assets/images/action-icon-1.png" alt="Eventos">
             <span class="description-text">Eventos</span>
           </section>
         </div>
-        <div class="col-6 py-1 py-lg-1 col-lg-3">
-          <section class="action-card mx-auto my-auto d-flex row">
-            <img class="card-icon mx-auto mt-3 my-lg-1" height="190px" src="/images/action-icon-2.png" alt="Eventos">
-            <span class="description-text mb-3">Maratón</span>
+        <div class="col-6 py-5 py-lg-1 col-lg-3">
+          <section class="action-card mx-auto my-auto d-flex row" @click="routerPush('maraton')">
+            <img class="card-icon mx-auto mt-3 my-lg-1" src="/src/assets/images/action-icon-2.png" alt="Eventos">
+            <span class="description-text mb-1">Maratón</span>
           </section>
         </div>
-        <div class="col-6 py-1 py-lg-1 col-lg-3">
-          <section class="action-card mx-auto my-auto d-flex row">
-            <img class="card-icon mx-auto mt-3 my-lg-1"  height="auto" src="/images/action-icon-3.png" alt="Eventos">
+        <div class="col-6 py-5 py-lg-1 col-lg-3">
+          <section class="action-card mx-auto my-auto d-flex row" @click="routerPush('bono')">
+            <img class="card-icon mx-auto mt-3 my-lg-1" src="/src/assets/images/action-icon-3.png" alt="Eventos">
             <span class="description-text">Bono Contribución</span>
           </section>
         </div>
-        <div class="col-6 py-1 py-lg-1 col-lg-3">
-          <section class="action-card mx-auto my-auto d-flex row">
-            <img class="card-icon mx-auto mt-3 my-lg-1" src="/images/action-icon-4.png" alt="Eventos">
+        <div class="col-6 py-5 py-lg-1 col-lg-3">
+          <section class="action-card mx-auto my-auto d-flex row" @click="routerPush('campaña')">
+            <img class="card-icon mx-auto mt-3 my-lg-1" src="/src/assets/images/action-icon-4.png" alt="Eventos">
             <span class="description-text">Campañas</span>
           </section>
         </div>
@@ -44,7 +44,11 @@
 </template>
 <script>
 export default {
-  
+  methods: {
+    routerPush (param) {
+      this.$router.push({ path: '/accion', hash: `#${param}`})
+    }
+  }
 }
 </script>
 <style scoped lang="scss">
@@ -55,6 +59,7 @@ export default {
     padding: 20vh 0 !important;
   }
   .action-card {
+    cursor: pointer;
     width: 196px;
     height: 230px;
 
@@ -74,10 +79,6 @@ export default {
     }
     .cards-container {
       padding: 10px 0 !important;
-    }
-    .card-icon {
-      height: 96px;
-      width: 72;
     }
   }
   .description-text {

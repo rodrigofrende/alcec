@@ -32,31 +32,38 @@
   </div>
 </template>
 <script>
-import Carrousel from '../home/components/Carrousel.vue';
-import Footer from '/src/components/common/Footer.vue'
+import Carrousel from "../home/components/Carrousel.vue";
+import Footer from "/src/components/common/Footer.vue";
 
 export default {
   components: {
     Footer,
-    Carrousel
+    Carrousel,
   },
-  data () {
+  data() {
     return {
       images: [
-        { src: '/images/home-slider-2.png', alt: 'Alcec' },
-        { src: '/images/home-slider-3.png', alt: 'Alcec' },
-        { src: '/images/home-slider-4.png', alt: 'Alcec', href: 'http://hogardetransito.alcec.org/', innerText: 'Reservar' },
-      ]
-    }
-  }
-}
+        { src: "/src/assets/images/home-slider-2.png", alt: "Alcec" },
+        { src: "/src/assets/images/home-slider-3.png", alt: "Alcec" },
+        {
+          src: "/src/assets/images/home-slider-4.png",
+          alt: "Alcec",
+          href: "http://hogardetransito.alcec.org/",
+          innerText: "Reservar",
+          isRouterRedirect: true
+        },
+      ],
+    };
+  },
+};
 </script>
 <style lang="scss" scoped>
-  .alcec-container {
-    padding: 22vh 7vw;
-  }
-  .alcec {
-    text-align: left;
-    padding-left: 10vw;
-  }
+.alcec-container {
+  padding: 22vh 7vw;
+}
+
+.alcec {
+  text-align: left;
+  padding-left: 10vw;
+}
 </style>

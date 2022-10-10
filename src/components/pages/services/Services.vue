@@ -32,6 +32,9 @@ import Carrousel from "../home/components/Carrousel.vue";
 import Footer from "/src/components/common/Footer.vue";
 import Diagnostic from "./components/Diagnostic.vue";
 
+import serviceSlider from '/src/assets/images/services-slider-1.png'
+import homeSlider from '/src/assets/images/home-slider-4.png'
+
 export default {
   components: {
     Carrousel,
@@ -42,13 +45,13 @@ export default {
     return {
       images: [
         {
-          src: "/src/assets/images/services-slider-1.png",
+          src: serviceSlider,
           alt: "Alcec",
           innerText: "Turnos",
           href: "http://centrooncologico.alcec.org/turnos/",
         },
         {
-          src: "/src/assets/images/home-slider-4.png",
+          src: homeSlider,
           alt: "Alcec",
           href: "http://hogardetransito.alcec.org/",
           innerText: "Reservar",
@@ -57,7 +60,7 @@ export default {
       ],
       images2: [
         {
-          src: "/src/assets/images/home-slider-4.png",
+          src: homeSlider,
           alt: "Alcec",
           href: "http://hogardetransito.alcec.org/",
           innerText: "Reservar",

@@ -15,6 +15,12 @@
   import Donate from './components/Donate.vue';
   import ContactForm from './components/ContactForm.vue'
   import Footer from '/src/components/common/Footer.vue'
+
+  import homeSlider1 from '/src/assets/images/home-slider-1.png'
+  import homeSlider2 from '/src/assets/images/home-slider-2.png'
+  import homeSlider3 from '/src/assets/images/home-slider-3.png'
+  import homeSlider4 from '/src/assets/images/home-slider-4.png'
+  import serviceSlider1 from '/src/assets/images/services-slider-1.png'
   
   export default {
     components: {
@@ -34,11 +40,11 @@
     data () {
       return {
         images: [
-          { src: '/src/assets/images/home-slider-1.png', alt: 'Alcec' },
-          { src: '/src/assets/images/home-slider-2.png', alt: 'Alcec' },
-          { src: '/src/assets/images/home-slider-3.png', alt: 'Alcec' },
-          { src: '/src/assets/images/services-slider-1.png', alt: 'Alcec', innerText: 'Turnos', href: 'http://centrooncologico.alcec.org/turnos/' },
-          { src: '/src/assets/images/home-slider-4.png', alt: 'Alcec', href: 'http://hogardetransito.alcec.org/', innerText: 'Reservar', isRouterRedirect: true },
+          { src: homeSlider1, alt: 'Alcec' },
+          { src: homeSlider2, alt: 'Alcec' },
+          { src: homeSlider3, alt: 'Alcec' },
+          { src: serviceSlider1, alt: 'Alcec', innerText: 'Turnos', href: 'http://centrooncologico.alcec.org/turnos/' },
+          { src: homeSlider4, alt: 'Alcec', href: 'http://hogardetransito.alcec.org/', innerText: 'Reservar', isRouterRedirect: true },
         ]
       }
     }

@@ -1,9 +1,9 @@
 <template lang="">
   <div class="row grey-container">
-    <div class="row">
+    <div class="row" id="oncologia">
       <div class="col-12 col-lg-5 pb-5 pb-lg-0">
-        <span class="title d-flex me-auto mb-3">Diagnóstico &</span>
-        <span class="title d-flex me-auto">Tratamiento</span>
+        <span class="title d-flex me-auto mb-3"><b>Diagnóstico &</b></span>
+        <span class="title d-flex me-auto"><b>Tratamiento</b></span>
       </div>
       <div class="col-12 col-lg-7">
         <section class="">
@@ -22,17 +22,17 @@
         <span class="title d-flex me-auto pb-5 sub-title">Oncología</span>
       </div>
       <div class="col-12 col-lg-5 pb-5 pb-lg-0">
-        <span class="title d-flex me-auto mb-3 item-title">Quimioterapia</span>
+        <span class="title d-flex me-auto ms-3 mb-3 item-title">Quimioterapia</span>
       </div>
       <div class="col-12 col-lg-7">
         <section class="">
           <ul>
-            <li> INFUSION CONTINUA</li>
-            <li> ESTÁNDAR – NIVEL I – POR DIA DE TRATAMIENTO</li>
-            <li> CON TAXANO – NIVEL II – POR DIA DE TRATAMIENTO</li>
-            <li> BIOTERAPIA – POR DIA DE TRATAMIENTO</li>
-            <li> SERVIS DE PORT-A-CATH</li>
-            <li> CONSULTAS ONCOLOGICAS</li>
+            <li> Infusion continua</li>
+            <li> Estándar – nivel I – por día de tratamiento</li>
+            <li> Con taxano – nivel II – por día de tratamiento</li>
+            <li> Bioterapia – por día de tratamiento</li>
+            <li> Servis de port-a-cath</li>
+            <li> Consultas oncológicas</li>
           </ul>
         </section>
       </div>
@@ -40,7 +40,7 @@
 
     <div class="row py-5">
       <div class="col-12 col-lg-5 pb-5 pb-lg-0">
-        <span class="title d-flex me-auto mb-3 item-title">Oncohematología</span>
+        <span class="title d-flex me-auto mb-3 ms-3 item-title">Oncohematología</span>
       </div>
       <div class="col-12 col-lg-7">
         <section class="">
@@ -70,13 +70,13 @@
       <div class="col-12 col-lg-7">
         <section class="mt-5">
           <ul>
-            <li> BRAQUITERAPIA GINECOLÓGICA ENDOCAVITARIA DE BAJA TASA</li>
-            <li> RADIOTERAPIA CONVENCIONAL</li>
-            <li> RADIOTERAPIA CON ACELERADOR LINEAL (RT2D)</li>
-            <li> RADIOTERAPIA TRIDIMENSIONAL CONFORMADA (RT3DC)</li>
-            <li> RADIOTERAPIA DE INTENSIDAD MODULADA (IMRT)</li>
-            <li> TOMOGRAFÍA DE PLANIFICACIÓN</li>
-            <li> CONSULTA CON MEDICOS ESPECIALISTAS EN RADIOTERAPIA</li>
+            <li> Braquiterapia ginecológica endocavitaria de baja tasa</li>
+            <li> Radioterapia convencional</li>
+            <li> Radioterapia con acelerador lineal (RT2D)</li>
+            <li> Radioterapia tridimensional conformada (RT3DC)</li>
+            <li> Radioterapia de intensidad modulada (IMRT)</li>
+            <li> Tomografía de planificación</li>
+            <li> Consulta con médicos especialistas en radioterapia</li>
           </ul>
         </section>
       </div>
@@ -114,13 +114,13 @@
 
     <div class="row py-5"></div>
 
-    <div class="row py-5">
+    <div class="row py-5" id="imagenes">
       <div class="col-12 col-lg-5 pb-5 pb-lg-0">
-        <span class="title d-flex me-auto mb-3">Calidad &</span>
-        <span class="title d-flex me-auto">Innovación</span>
+        <span class="title d-flex me-auto mb-3"><b>Calidad &</b></span>
+        <span class="title d-flex me-auto"><b>Innovación</b></span>
       </div>
       <div class="col-12 col-lg-7">
-        <section class="">
+        <section>
           <p>
             El Centro Oncológico y de Imágenes de ALCEC cuenta con un destacado equipo de especialistas, de altísimo nivel profesional y humano. Conscientes de la importancia de la capacitación permanente de sus profesionales, periódicamente realizan especializaciones en la Argentina y en el exterior. 
             Con más de 30 años de trayectoria, el Centro de ALCEC es uno de los pocos centros 
@@ -135,7 +135,26 @@
 </template>
 <script>
 export default {
-
+  methods: {
+    scrollTo () {
+      if (!this.$route.hash) return
+    
+      const el = document.querySelector(`${this.$route.hash}`)
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  },
+  watch: {
+    $route: {
+      handler(route) {
+        if (route.hash) {
+          this.scrollTo()
+        }
+      },
+      immediate: true
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -170,6 +189,9 @@ li {
 
 ul {
   list-style: none; /* Remove default bullets */
+}
+p {
+  
 }
 
 ul li::before {

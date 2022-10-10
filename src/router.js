@@ -15,7 +15,7 @@ const routes = [
     { path: '/reservar-turno', component: Reserva },
     { path: '/contacto', component: Contacto },
     { path: '/nosotros', component: Nosotros },
-    { path: '/servicios', component: Services },
+    { path: '/servicios', component: Services, props: true },
     { path: '/todos-somos-alcec', component: Alcec },
     { path: '/colaborar', component: Donate },
     { path: '/acciones', component: Acciones },

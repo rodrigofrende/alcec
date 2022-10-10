@@ -35,6 +35,10 @@
 import Carrousel from "../home/components/Carrousel.vue";
 import Footer from "/src/components/common/Footer.vue";
 
+import homeSlider2 from '/src/assets/images/home-slider-2.png'
+import homeSlider3 from '/src/assets/images/home-slider-3.png'
+import homeSlider4 from '/src/assets/images/home-slider-4.png'
+
 export default {
   components: {
     Footer,
@@ -43,10 +47,10 @@ export default {
   data() {
     return {
       images: [
-        { src: "/src/assets/images/home-slider-2.png", alt: "Alcec" },
-        { src: "/src/assets/images/home-slider-3.png", alt: "Alcec" },
+        { src: homeSlider2, alt: "Alcec" },
+        { src: homeSlider3, alt: "Alcec" },
         {
-          src: "/src/assets/images/home-slider-4.png",
+          src: homeSlider4,
           alt: "Alcec",
           href: "http://hogardetransito.alcec.org/",
           innerText: "Reservar",

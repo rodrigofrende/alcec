@@ -27,8 +27,8 @@
         </div>
         <div class="col-6 py-5 py-lg-1 col-lg-3">
           <section class="action-card mx-auto my-auto d-flex row" @click="routerPush('bono')">
-            <img class="card-icon mx-auto mt-3 my-lg-1" src="/src/assets/images/action-icon-3.png" alt="Eventos">
-            <span class="description-text">Bono Contribución</span>
+            <img class="card-icon mx-auto mt-3 my-lg-1 bono" src="/src/assets/images/action-icon-3.png" alt="Eventos">
+            <span class="description-text mb-1 mt-lg-1">Bono Contribución</span>
           </section>
         </div>
         <div class="col-6 py-5 py-lg-1 col-lg-3">

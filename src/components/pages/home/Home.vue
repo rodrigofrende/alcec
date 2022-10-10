@@ -16,6 +16,8 @@ import Donate from './components/Donate.vue';
 import ContactForm from './components/ContactForm.vue'
 import Footer from '/src/components/common/Footer.vue'
 
+import homeSlider1 from '/src/assets/images/home-slider-1.png'
+
 export default {
   components: {
     Carrousel,
@@ -28,7 +30,7 @@ export default {
   data () {
     return {
       images: [
-        { src: '/src/assets/images/home-slider-1.png', alt: 'Alcec' },
+        { src: homeSlider1, alt: 'Alcec' },
         { src: '/src/assets/images/home-slider-2.png', alt: 'Alcec' },
         { src: '/src/assets/images/home-slider-3.png', alt: 'Alcec' },
         { src: '/src/assets/images/services-slider-1.png', alt: 'Alcec', innerText: 'Turnos', href: 'http://centrooncologico.alcec.org/turnos/' },

@@ -70,7 +70,6 @@ export default {
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
 }
 .nuestra {
-  font-family: 'Gotham';
   font-style: normal;
   font-weight: 300;
   font-size: 20px;
@@ -79,7 +78,6 @@ export default {
   color: #636161;
 }
 .titulo {
-  font-family: 'Gotham';
   font-style: normal;
   font-weight: 300;
   font-size: 30px;

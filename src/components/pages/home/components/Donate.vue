@@ -63,7 +63,6 @@ export default {
 .colaborar,
 .donar,
 .descripcion {
-  font-family: 'Gotham';
   font-style: normal;
   font-weight: 400;
   text-align: center;

@@ -69,7 +69,6 @@ export default {
 }
 @media screen and (max-width: 800px) {
   .social-media-container {
-    background-color: red;
     flex-direction: column;
     margin-top: auto;
     margin-bottom: auto;

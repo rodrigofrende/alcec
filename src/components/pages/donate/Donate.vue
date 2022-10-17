@@ -1,5 +1,5 @@
 <template lang="">
-  <div class="donate-container">
+  <div class="donate-container" id="target">
     <div class="row my-5">
       <div class="col-12 col-lg-4">
         <span class="title ms-auto d-flex mt-2">COLABORAR</span>
@@ -21,7 +21,15 @@ export default {
   components: {
     Footer,
     DonateForm
-  }
+  },
+  mounted () {
+    const id = '#target'
+    const yOffset = -250
+    const element = document.querySelector(id);
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({top: y, behavior: 'smooth'});
+  },
 }
 </script>
 <style scoped lang="scss">

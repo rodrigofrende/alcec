@@ -1,7 +1,7 @@
 <template lang="">
   <div class="mt-4">
     <Carrousel :images="images" />
-    <AboutUs id="target"/>
+    <AboutUs id="nosotros"/>
     <Actions />
     <Donate />
     <ContactForm />
@@ -32,9 +32,14 @@
       Footer
     },
     mounted () {
-      const el = document.querySelector('#target')
+      const el = document.querySelector('#nosotros')
       if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
+        const id = 'nosotros';
+        const yOffset = -200; 
+        const element = document.getElementById(id);
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({top: y, behavior: 'smooth'});
       }
     },
     data () {
@@ -43,7 +48,7 @@
           { src: homeSlider1, alt: 'Alcec' },
           { src: homeSlider2, alt: 'Alcec' },
           { src: homeSlider3, alt: 'Alcec' },
-          { src: serviceSlider1, alt: 'Alcec', innerText: 'Turnos', href: 'http://centrooncologico.alcec.org/turnos/' },
+          { src: serviceSlider1, alt: 'Alcec', innerText: 'Turnos', href: 'https://api.whatsapp.com/send?phone=+543442666225&text=%20' },
           { src: homeSlider4, alt: 'Alcec', href: 'http://hogardetransito.alcec.org/', innerText: 'Reservar', isRouterRedirect: true },
         ]
       }

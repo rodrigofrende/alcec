@@ -141,7 +141,12 @@ export default {
     
       const el = document.querySelector(`${this.$route.hash}`)
       if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
+        const id = `${this.$route.hash}`;
+        const yOffset = -300; 
+        const element = document.querySelector(id);
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({top: y, behavior: 'smooth'});
       }
     }
   },

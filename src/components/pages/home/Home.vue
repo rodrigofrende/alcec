@@ -1,5 +1,6 @@
 <template lang="">
-<div class="mt-4">
+<div class="mt-4" id="">
+  <div id="home"></div>
   <Carrousel :images="images" />
   <AboutUs />
   <Actions />
@@ -31,13 +32,24 @@ export default {
     ContactForm,
     Footer
   },
+  mounted () {
+    const el = document.getElementById('home')
+    if (el) {
+      const id = 'home';
+      const yOffset = -200; 
+      const element = document.getElementById(id);
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({top: y, behavior: 'smooth'});
+    }
+  },
   data () {
     return {
       images: [
         { src: homeSlider1, alt: 'Alcec' },
         { src: homeSlider2, alt: 'Alcec' },
         { src: homeSlider3, alt: 'Alcec' },
-        { src: serviceSlider1, alt: 'Alcec', innerText: 'Turnos', href: 'http://centrooncologico.alcec.org/turnos/' },
+        { src: serviceSlider1, alt: 'Alcec', innerText: 'Turnos', href: 'https://api.whatsapp.com/send?phone=+543442666225&text=%20' },
         { src: homeSlider4, alt: 'Alcec', href: 'http://hogardetransito.alcec.org/', innerText: 'Reservar', isRouterRedirect: true },
       ]
     }
@@ -45,5 +57,4 @@ export default {
 }
 </script>
 <style lang="">
-    
 </style>

@@ -48,7 +48,7 @@ export default {
           src: serviceSlider,
           alt: "Alcec",
           innerText: "Turnos",
-          href: "http://centrooncologico.alcec.org/turnos/",
+          href: "https://api.whatsapp.com/send?phone=+543442666225&text=%20",
         },
         {
           src: homeSlider,

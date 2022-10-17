@@ -17,3 +17,4 @@ import Header from './components/common/Header.vue';
   display: none;
 }
 </style>
+

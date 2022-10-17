@@ -7,14 +7,17 @@ export default {
     },
     routerPush (param) {
       this.$router.push({ path: '/servicios', hash: `#${param}`})
+    },
+    naviteTo (route) {
+      this.$router.push({ path: route })
     }
-  },
+  }
 };
 </script>
 
 <template>
-  <div>
-    <div class="d-flex pb-4">
+  <div class="sticky-top">
+    <div class="d-flex pb-4 bg-white">
       <button
         class="btn btn-secondary turno-btn"
         @click="
@@ -46,44 +49,52 @@ export default {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon navbar-dark "></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav d-flex mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <router-link
+              <a
                 class="nav-link"
                 aria-current="page"
-                to="/"
+                @click="naviteTo('/')"
                 :class="[{ active: $route.path === '/' }]"
-                >INICIO</router-link
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                >INICIO</a
               >
             </li>
             <li class="nav-item">
-              <router-link
+              <a
                 class="nav-link"
                 aria-current="page"
-                to="/nosotros"
+                @click="naviteTo('/nosotros')"
                 :class="[{ active: $route.path === '/nosotros' }]"
-                >NOSOTROS</router-link
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                >NOSOTROS</a
               >
             </li>
             <li class="nav-item">
-              <router-link
+              <a
                 class="nav-link"
                 aria-current="page"
-                to="/acciones"
+                @click="naviteTo('/acciones')"
                 :class="[{ active: $route.path === '/acciones' }]"
-                >ACCIONES</router-link
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                >ACCIONES</a
               >
             </li>
             <li class="nav-item">
-              <router-link
+              <a
                 class="nav-link"
                 aria-current="page"
-                to="/colaborar"
+                @click="naviteTo('/colaborar')"
                 :class="[{ active: $route.path === '/colaborar' }]"
-                >COLABORAR</router-link
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                >COLABORAR</a
               >
             </li>
             <li class="nav-item dropdown">
@@ -92,33 +103,36 @@ export default {
                 id="navbarDropdownMenuLink"
                 role="button"
                 data-bs-toggle="dropdown"
-                data-bs-auto-close="false"
-                aria-expanded="false"
+                data-bs-auto-close="true"
                 :class="[{ active: $route.path === '/servicios' }]"
                 >NUESTROS SERVICIOS</a
               >
-
+                
               <ul class="dropdown-menu" :style="{ margin: 0 }" aria-labelledby="navbarDropdownMenuLink">
                 <li><a @click="routerPush('oncologia')" class="dropdown-item">ONCOLOGÍA</a></li>
                 <li><a @click="routerPush('imagenes')" class="dropdown-item">IMÁGENES</a></li>
               </ul>
             </li>
             <li class="nav-item">
-              <router-link
+              <a
                 class="nav-link"
                 aria-current="page"
-                to="/todos-somos-alcec"
+                @click="naviteTo('/todos-somos-alcec')"
                 :class="[{ active: $route.path === '/todos-somos-alcec' }]"
-                >TODOS SOMOS ALCEC</router-link
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                >TODOS SOMOS ALCEC</a
               >
             </li>
             <li class="nav-item">
-              <router-link
+              <a
                 class="nav-link"
                 aria-current="page"
-                to="/contacto"
+                @click="naviteTo('/contacto')"
                 :class="[{ active: $route.path === '/contacto' }]"
-                >CONTACTO</router-link
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                >CONTACTO</a
               >
             </li>
           </ul>
@@ -167,6 +181,8 @@ export default {
 }
 .navbar {
   background: #9c3db7;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.9);
+
   &.navbar-expand-lg {
     padding: 10px 0px;
   }
@@ -191,10 +207,27 @@ export default {
   }
 }
 .navbar-toggler {
+  // &:focus {
+  //   box-shadow: none;
+  // }
   &:focus {
-    box-shadow: none;
+    box-shadow: none !important;
+  }
+  border: 1px solid #4f0e62;
+  &:not(.collapsed) {
+    box-shadow: 0 0 4px 1px #4f0e62 !important;
   }
 }
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
+    content: "\f00d" !important;
+    font-family: "FontAwesome";
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.55);
+}
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+  background-image: none;
+}
+
 @media screen and (max-width: 860px) {
   .turno-btn,
   .login-btn {
@@ -209,4 +242,5 @@ export default {
     right: 5vw;
   }
 }
+
 </style>

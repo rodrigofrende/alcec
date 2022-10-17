@@ -4,7 +4,7 @@
     <AboutUs />
     <Actions />
     <Donate />
-    <ContactForm id="target"/>
+    <ContactForm id="contacto"/>
     <Footer />
   </div>
   </template>
@@ -32,9 +32,14 @@
       Footer
     },
     mounted () {
-      const el = document.querySelector('#target')
+      const el = document.getElementById('contacto')
       if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
+        const id = 'contacto';
+        const yOffset = -200; 
+        const element = document.getElementById(id);
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({top: y, behavior: 'smooth'});
       }
     },
     data () {
@@ -43,13 +48,12 @@
           { src: homeSlider1, alt: 'Alcec' },
           { src: homeSlider2, alt: 'Alcec' },
           { src: homeSlider3, alt: 'Alcec' },
-          { src: serviceSlider1, alt: 'Alcec', innerText: 'Turnos', href: 'http://centrooncologico.alcec.org/turnos/' },
+          { src: serviceSlider1, alt: 'Alcec', innerText: 'Turnos', href: 'https://api.whatsapp.com/send?phone=+543442666225&text=%20' },
           { src: homeSlider4, alt: 'Alcec', href: 'http://hogardetransito.alcec.org/', innerText: 'Reservar', isRouterRedirect: true },
         ]
       }
     }
   }
   </script>
-  <style lang="">
-      
+  <style scoped lang="">
   </style>

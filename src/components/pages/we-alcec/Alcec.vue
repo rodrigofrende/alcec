@@ -1,5 +1,5 @@
 <template lang="">
-  <div class="mt-4">
+  <div class="mt-4" id="target">
     <Carrousel :images="images" />
 
   <section>
@@ -44,7 +44,15 @@ export default {
     Footer,
     Carrousel,
   },
-  data() {
+  mounted () {
+    const id = '#target'
+    const yOffset = -250
+    const element = document.querySelector(id);
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({top: y, behavior: 'smooth'});
+  },
+  data () {
     return {
       images: [
         { src: homeSlider2, alt: "Alcec" },

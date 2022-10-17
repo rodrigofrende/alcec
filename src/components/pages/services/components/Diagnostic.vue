@@ -17,14 +17,12 @@
 
     <div class="row py-3"></div>
 
-    <div class="row py-5">
+    <div class="row py-5 grey-bg">
       <div class="col-12 pb-5 pb-lg-0">
-        <span class="title d-flex me-auto pb-5 sub-title">Oncología</span>
+        <span class="title d-flex me-auto py-5 sub-title">Oncología</span>
       </div>
-      <div class="col-12 col-lg-5 pb-5 pb-lg-0">
-        <span class="title d-flex me-auto ms-3 mb-3 item-title">Quimioterapia</span>
-      </div>
-      <div class="col-12 col-lg-7">
+      <div class="col-12 col-lg-6 py-5 pb-lg-0">
+        <span class="title d-flex me-auto mb-3 item-title">Quimioterapia</span>
         <section class="">
           <ul>
             <li> Infusion continua</li>
@@ -36,13 +34,11 @@
           </ul>
         </section>
       </div>
-    </div>
-
-    <div class="row py-5">
-      <div class="col-12 col-lg-5 pb-5 pb-lg-0">
+      <div class="col-12 col-lg-6">
+        <div class="col-12 col-lg-5 py-5 pb-lg-0">
         <span class="title d-flex me-auto mb-3 ms-3 item-title">Oncohematología</span>
       </div>
-      <div class="col-12 col-lg-7">
+      <div class="col-12">
         <section class="">
           <ul>
             <li> Consultas oncohematológicas</li>
@@ -61,47 +57,52 @@
           </ul>
         </section>
       </div>
-    </div>
-
-    <div class="row py-5">
-      <div class="col-12 col-lg-5 pb-5 pb-lg-0">
-        <span class="title d-flex me-auto mb-3 sub-title">Radioterapia</span>
-      </div>
-      <div class="col-12 col-lg-7">
-        <section class="mt-5">
-          <ul>
-            <li> Braquiterapia ginecológica endocavitaria de baja tasa</li>
-            <li> Radioterapia convencional</li>
-            <li> Radioterapia con acelerador lineal (RT2D)</li>
-            <li> Radioterapia tridimensional conformada (RT3DC)</li>
-            <li> Radioterapia de intensidad modulada (IMRT)</li>
-            <li> Tomografía de planificación</li>
-            <li> Consulta con médicos especialistas en radioterapia</li>
-          </ul>
-        </section>
       </div>
     </div>
 
-    <div class="row py-5">
-      <div class="col-12 col-lg-5 pb-5 pb-lg-0">
-        <span class="title d-flex me-auto mb-3 sub-title">Centro de Imágenes</span>
+
+    <div class="row py-5 px-0">
+      <div class="col-12 col-lg-6 py-5 pb-lg-0">
+        <div class="grey-bg py-5 p-5">
+
+          <span class="title d-flex me-auto mb-3 sub-title">Radioterapia</span>
+          <section class="mt-5">
+            <ul>
+              <li> Braquiterapia ginecológica endocavitaria de baja tasa</li>
+              <li> Radioterapia convencional</li>
+              <li> Radioterapia con acelerador lineal (RT2D)</li>
+              <li> Radioterapia tridimensional conformada (RT3DC)</li>
+              <li> Radioterapia de intensidad modulada (IMRT)</li>
+              <li> Tomografía de planificación</li>
+              <li> Consulta con médicos especialistas en radioterapia</li>
+            </ul>
+          </section>
+
+        </div>
       </div>
-      <div class="col-12 col-lg-7">
-        <section class="mt-5">
-          <ul>
-            <li> Tomografía de diagnóstico</li>
-            <li> Mamografía digital directa</li>
-            <li> Ecografía de diagnóstico</li>
-          </ul>
-        </section>
+      <div class="col-12 col-lg-6 py-5 pb-lg-0">
+        <div class="grey-bg p-5">
+          <span class="title d-flex ps-5 mb-3 sub-title">Centro de Imágenes</span>
+          <section class="mt-5 ps-5">
+            <ul class="">
+              <li> Tomografía de diagnóstico</li>
+              <li> Mamografía digital directa</li>
+              <li> Ecografía de diagnóstico</li>
+            </ul>
+          </section>
+        </div>
       </div>
     </div>
 
     <div class="row py-5">
-      <div class="col-12 col-lg-5 pb-5 pb-lg-0">
+
+    </div>
+
+    <div class="row py-5 grey-bg cp">
+      <div class="col-12 col-lg-5 py-5 pb-lg-0">
         <span class="title d-flex me-auto mb-3 sub-title">Cuidados Paliativos</span>
       </div>
-      <div class="col-12 col-lg-7">
+      <div class="col-12 py-5 col-lg-7">
         <section class="mt-1">
           <p>Los Cuidados Paliativos mejoran la calidad de vida de los pacientes con enfermedades 
           avanzadas que no responden a tratamientos curativos. En el tratamiento se realiza el 
@@ -167,6 +168,14 @@ export default {
   padding: 10vh 7vw;
   background-color: rgba(231, 231, 231, .2);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
+.grey-bg {
+  background: #f1f0f0;
+  box-shadow: 8px 8px 8px #e0e0e0;
+  border-radius: 10px;
+  &:not(.cp) {
+    min-height: 416px;
+  }
 }
 
 .sub-title {

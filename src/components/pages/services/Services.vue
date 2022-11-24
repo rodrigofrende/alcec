@@ -35,6 +35,13 @@ import Diagnostic from "./components/Diagnostic.vue";
 import serviceSlider from '/src/assets/images/services-slider-1.png'
 import homeSlider from '/src/assets/images/home-slider-4.png'
 
+import slider1 from '/src/assets/images/slider-1.png'
+import slider2 from '/src/assets/images/slider-2.png'
+import slider3 from '/src/assets/images/slider-3.png'
+import slider4 from '/src/assets/images/slider-4.png'
+import slider5 from '/src/assets/images/slider-5.png'
+import slider6 from '/src/assets/images/slider-6.png'
+
 export default {
   components: {
     Carrousel,
@@ -44,6 +51,12 @@ export default {
   data() {
     return {
       images: [
+        { src: slider2, alt: 'Alcec' },
+        { src: slider3, alt: 'Alcec' },
+        { src: slider1, alt: 'Alcec' },
+        { src: slider4, alt: 'Alcec' },
+        { src: slider5, alt: 'Alcec' },
+        { src: slider6, alt: 'Alcec' },
         {
           src: serviceSlider,
           alt: "Alcec",

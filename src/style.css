@@ -2,13 +2,12 @@
 :root {
   font-size: 16px;
   font-weight: 400;
-  color-scheme: light dark;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -26,14 +25,12 @@ body {
 #app {
   width: 100%;
   margin: 0 auto;
-  padding: 16px 0px 0px 0px;
   text-align: center;
 }
 
 .title {
   font-weight: 400;
   font-size: 40px;
-  line-height: 44px;
   text-align: center;
   color: #636161;
 }
@@ -42,8 +39,8 @@ p {
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
-  line-height: 24px;
   text-align: justify;
+  word-spacing: -2px;
 
   color: #000000;
 }
@@ -64,7 +61,6 @@ p {
   margin-bottom: 0rem;
   font-weight: 300;
   font-size: 20px;
-  line-height: 22px;
 
   color: #636161;
 }
@@ -73,7 +69,6 @@ p {
     width: 100%;
     font-size: 1rem !important;
     font-weight: 400;
-    line-height: 1.5;
     color: #212529 !important;
     background: #D9D9D9 !important;
     border-radius: 0.375rem;
@@ -86,4 +81,17 @@ p {
   outline: 0;
   background: #D9D9D9 !important;
   box-shadow: 0 0 0 1px rgba(47, 48, 49, 0.545) !important;
+}
+
+.success-msg {
+  color: green;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+a.nav-link:not(.active) {
+  color: #fff !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }

@@ -8,25 +8,25 @@
         <div class="col-6 py-4 py-lg-3 col-xl-3">
           <section class="action-card mx-auto my-auto d-flex row">
             <span class="card-title">Programa de padrinazgo</span>
-            <button class="btn mx-auto my-auto donate-btn" @click="$router.push({ path: '/colaborar'})"> <span class="button-text">Donar</span></button>
+            <button class="btn mx-auto my-auto donate-btn" @click="$router.push({ path: '/colaborar', hash: '#padrinazgo'})"> <span class="button-text">Donar</span></button>
           </section>
         </div>
         <div class="col-6 py-4 py-lg-3 col-xl-3">
           <section class="action-card mx-auto my-auto d-flex row">
             <span class="card-title">Coronas de caridad</span>
-            <button class="btn mx-auto my-auto donate-btn" @click="$router.push({ path: '/colaborar'})"> <span class="button-text">Donar</span></button>
+            <button class="btn mx-auto my-auto donate-btn" @click="$router.push({ path: '/colaborar', hash: '#coronas'})"> <span class="button-text">Donar</span></button>
           </section>
         </div>
         <div class="col-6 py-4 py-lg-3 col-xl-3">
           <section class="action-card mx-auto my-auto d-flex row">
             <span class="card-title">Donar mensualmente</span>
-            <button class="btn mx-auto my-auto donate-btn" @click="$router.push({ path: '/colaborar'})"> <span class="button-text">Donar</span></button>
+            <button class="btn mx-auto my-auto donate-btn" @click="$router.push({ path: '/colaborar', hash: '#mensualmente'})"> <span class="button-text">Donar</span></button>
           </section>
         </div>
         <div class="col-6 py-4 py-lg-3 col-xl-3">
           <section class="action-card mx-auto my-auto d-flex row">
             <span class="card-title">Donar por única vez</span>
-            <button class="btn mx-auto my-auto donate-btn" @click="$router.push({ path: '/colaborar'})"> <span class="button-text">Donar</span></button>
+            <button class="btn mx-auto my-auto donate-btn" @click="$router.push({ path: '/colaborar', hash: '#unica'})"> <span class="button-text">Donar</span></button>
           </section>
         </div>
       </div>
@@ -108,8 +108,6 @@ export default {
 .button-text {
   font-weight: 300;
   font-size: 30px;
-  line-height: 32px;
-  margin-top: 14px;
   text-align: center;
   width: 100%;
   height: 100%;
@@ -134,7 +132,6 @@ export default {
 
   .button-text {
     font-size: 26px;
-    line-height: 28px;
   }
 }
 </style>

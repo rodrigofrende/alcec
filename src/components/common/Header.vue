@@ -1,4 +1,5 @@
 <script>
+
 export default {
   methods: {
     openLink(href) {
@@ -6,18 +7,24 @@ export default {
       window.open(href, "_blank");
     },
     routerPush (param) {
+      this.$emit('updateKey')
       this.$router.push({ path: '/servicios', hash: `#${param}`})
+
+      const dropdownUl = document.querySelector('.dropdown-menu')
+      dropdownUl.classList.remove('active');
+      dropdownUl.classList.remove('show');
     },
     naviteTo (route) {
-      this.$router.push({ path: route })
-    }
+      this.$emit('updateKey')
+      this.$router.push({ path: route, force: true })
+    },
   }
 };
 </script>
 
 <template>
   <div class="sticky-top">
-    <div class="d-flex pb-4 bg-white">
+    <div class="d-flex bg-white">
       <button
         class="btn btn-secondary turno-btn"
         @click="
@@ -34,7 +41,7 @@ export default {
       </button>
       <img
         src="/src/assets/images/iso-logo.png"
-        class="mx-auto d-block logo pt-5 pt-md-0"
+        class="mx-auto d-block logo pt-3 pt-md-0"
         alt="..."
       />
     </div>
@@ -104,13 +111,14 @@ export default {
                 role="button"
                 data-bs-toggle="dropdown"
                 data-bs-auto-close="true"
+                @click="switchSubMenu"
                 :class="[{ active: $route.path === '/servicios' }]"
                 >NUESTROS SERVICIOS</a
               >
                 
               <ul class="dropdown-menu" :style="{ margin: 0 }" aria-labelledby="navbarDropdownMenuLink">
-                <li><a @click="routerPush('oncologia')" class="dropdown-item">ONCOLOGÍA</a></li>
-                <li><a @click="routerPush('imagenes')" class="dropdown-item">IMÁGENES</a></li>
+                <li><a @click="routerPush('oncologia')" data-bs-toggle="dropdown" class="dropdown-item">ONCOLOGÍA</a></li>
+                <li><a @click="routerPush('imagenes')" data-bs-toggle="dropdown" class="dropdown-item">IMÁGENES</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -143,6 +151,9 @@ export default {
 </template>
 
 <style scoped lang="scss">
+.btn-secondary {
+  background-color: #878787 !important;
+}
   .dropdown-menu {
     background-color: #9c3db7;
     padding: 0;
@@ -160,7 +171,7 @@ export default {
     }
 }
 .logo {
-  max-height: 180px;
+  max-height: 182px;
   filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -187,15 +198,11 @@ export default {
     padding: 10px 0px;
   }
 }
-
 .nav-link {
   font-weight: 400;
   font-size: 15px;
-  margin-top: 8px;
-  text-overflow: ellipsis !important;
-  white-space: nowrap;
 
-  color: #ffffff;
+  height: 38px;
   padding-left: 2vw !important;
   padding-right: 2vw !important;
 

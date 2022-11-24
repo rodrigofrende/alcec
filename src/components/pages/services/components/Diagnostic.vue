@@ -15,17 +15,17 @@
       </div>
     </div>
 
-    <div class="row py-3"></div>
+    <div class="row py-5"></div>
 
-    <div class="row py-5 grey-bg">
-      <div class="col-12 pb-5 pb-lg-0">
-        <span class="title d-flex me-auto py-5 sub-title">Oncología</span>
+    <div class="row pt-3 grey-bg">
+      <div class="col-12 pb-4 pb-lg-0">
+        <span class="title d-flex me-auto pt-5 pb-3 sub-title">Oncología</span>
       </div>
       <div class="col-12 col-lg-6 py-5 pb-lg-0">
         <span class="title d-flex me-auto mb-3 item-title">Quimioterapia</span>
         <section class="">
           <ul>
-            <li> Infusion continua</li>
+            <li> Infusión continua</li>
             <li> Estándar – nivel I – por día de tratamiento</li>
             <li> Con taxano – nivel II – por día de tratamiento</li>
             <li> Bioterapia – por día de tratamiento</li>
@@ -61,8 +61,8 @@
     </div>
 
 
-    <div class="row py-5 px-0">
-      <div class="col-12 col-lg-6 py-5 pb-lg-0">
+    <div class="row py-1 px-0">
+      <div class="col-12 col-lg-6 py-4 ps-0 pb-lg-0">
         <div class="grey-bg py-5 p-5">
 
           <span class="title d-flex me-auto mb-3 sub-title">Radioterapia</span>
@@ -80,10 +80,10 @@
 
         </div>
       </div>
-      <div class="col-12 col-lg-6 py-5 pb-lg-0">
-        <div class="grey-bg p-5">
-          <span class="title d-flex ps-5 mb-3 sub-title">Centro de Imágenes</span>
-          <section class="mt-5 ps-5">
+      <div class="col-12 col-lg-6 pe-0 py-4 pb-lg-0">
+        <div class="grey-bg">
+          <span class="title d-flex me-auto mb-3 sub-title">Centro de Imágenes</span>
+          <section class="mt-5 ">
             <ul class="">
               <li> Tomografía de diagnóstico</li>
               <li> Mamografía digital directa</li>
@@ -94,11 +94,10 @@
       </div>
     </div>
 
-    <div class="row py-5">
-
+    <div class="row py-3">
     </div>
 
-    <div class="row py-5 grey-bg cp">
+    <!-- <div class="row py-5 grey-bg cp">
       <div class="col-12 col-lg-5 py-5 pb-lg-0">
         <span class="title d-flex me-auto mb-3 sub-title">Cuidados Paliativos</span>
       </div>
@@ -111,7 +110,7 @@
           menor sufrimiento y por sobre todo con dignidad.</p>
         </section>
       </div>
-    </div>
+    </div> -->
 
     <div class="row py-5"></div>
 
@@ -136,29 +135,36 @@
 </template>
 <script>
 export default {
+  data () {
+    return {
+      isMounted: false,
+    }
+  },
+  mounted () {
+    this.scrollTo()
+    this.isMounted = true
+  },
   methods: {
     scrollTo () {
       if (!this.$route.hash) return
     
-      const el = document.querySelector(`${this.$route.hash}`)
-      if (el) {
-        const id = `${this.$route.hash}`;
-        const yOffset = -300; 
-        const element = document.querySelector(id);
-        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      // const el = document.querySelector(`${this.$route.hash}`)
+      const id = `${this.$route.hash}`;
+      const yOffset = -300; 
+      const element = document.querySelector(id);
+      if (!element) return console.log('no element')
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
-        window.scrollTo({top: y, behavior: 'smooth'});
-      }
+      window.scrollTo({top: y, behavior: 'smooth'});
     }
   },
   watch: {
     $route: {
       handler(route) {
-        if (route.hash) {
+        if (route.hash && this.isMounted) {
           this.scrollTo()
         }
       },
-      immediate: true
     }
   }
 }
@@ -170,11 +176,18 @@ export default {
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
 }
 .grey-bg {
+  padding: 6rem 7rem 3rem 7rem;
   background: #f1f0f0;
   box-shadow: 8px 8px 8px #e0e0e0;
   border-radius: 10px;
   &:not(.cp) {
-    min-height: 416px;
+    min-height: 645px;
+  }
+  @media screen and (max-width: 1000px) {
+    min-height: 400px !important;
+  }
+  @media screen and (min-width: 100px) and (max-width: 1200px) {
+    padding: 6rem 4rem 3rem 4rem;
   }
 }
 
@@ -183,7 +196,7 @@ export default {
   font-size: 30px;
   line-height: 32px;
 
-  color: #636161;
+  color: #404040;
 }
 
 .item-title {
@@ -191,21 +204,23 @@ export default {
   font-size: 26px;
   line-height: 25px;
 
-  color: #636161;
+  color: #404040;
 }
 
 ul,
 li {
   text-align: left;
   font-size: 16px;
-  line-height: 22px;
+  color: #000000;
+  font-weight: lighter;
 }
 
 ul {
   list-style: none; /* Remove default bullets */
 }
-p {
-  
+.p-5 {
+  padding: 6rem 6rem !important;
+
 }
 
 ul li::before {
@@ -216,5 +231,6 @@ ul li::before {
   width: 0.7em; /* Also needed for space (tweak if needed) */
   margin-left: -1em; /* Also needed for space (tweak if needed) */
   font-size: 1.7rem;
+  vertical-align: middle;
 }
 </style>

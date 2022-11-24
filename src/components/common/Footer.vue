@@ -62,8 +62,6 @@ export default {
 .follow-text {
   font-weight: 300;
   font-size: 24px;
-  line-height: 26px;
-
   color: #FFFFFF;
 
 }

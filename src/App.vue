@@ -1,11 +1,27 @@
-<script setup>
+<script>
 import Header from './components/common/Header.vue';
+
+export default {
+  components: {
+    Header
+  },
+  data () {
+    return {
+      viewKey: 0
+    }
+  },
+  methods: {
+    updateKey () {
+      this.viewKey += 1
+    }
+  }
+}
 </script>
 
 <template>
   <div class="">
-    <Header/>
-    <router-view></router-view>
+    <Header @updateKey="updateKey"/>
+    <router-view :key="viewKey"></router-view>
   </div>
 </template>
 
